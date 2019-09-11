@@ -9,7 +9,7 @@ def parsecnvfile(cnvfile,hchr,ploidy):
 	TCGA-OR-A5LA-01A        TCGA-OR-A5LA    chr1    161959375       247650984       54615   -0.2341
 	"""
 	h = {}
-	f = file(cnvfile,"r")
+	f = open(cnvfile,"r")
 	for line in f:
 		if line.startswith("#"):continue
 		sn,pn,chrom,start,end,nums,logratio = line.rstrip("\n").split("\t")
@@ -20,11 +20,10 @@ def parsecnvfile(cnvfile,hchr,ploidy):
 		fploidy = 2**float(logratio) * ploidy
 		h[sn].append([chrom,start,end,ratio,ratio,fploidy])
 	f.close()
-	print h
 	return h
 def parsechrfile(chrfile):
 	h = {}
-	f = file(chrfile,"r")
+	f = open(chrfile,"r")
 	totlen = 0.0
 	for line in f:
 		arr = line.rstrip("\n").split("\t")
