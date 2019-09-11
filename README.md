@@ -6,4 +6,4 @@ Full documentation for the project is available at [https://wiki.basepedia.com/d
 
 ---
 
-
+[docs]: https://wiki.basepedia.com/doku.php?id=公共:software:cincalc
