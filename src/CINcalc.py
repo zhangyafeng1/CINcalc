@@ -57,7 +57,7 @@ def checkfile(fns):
 def __main():
 	usage = "usage: %prog CNVfile"
 	description = "Contact: Rong Zhengqin <rongzhengqin@basepedia.com>"
-	parser = OptionParser(usage,version="%prog 1.0.0",description = description)
+	parser = OptionParser(usage,version="%prog 1.0.1",description = description)
 	Required_group = OptionGroup(parser,'Required Options')
 	Required_group.add_option('-r',dest='chromfile',help="chromosome size file",metavar='FILE',type='string',default=None)
 	Required_group.add_option('-p',dest='ploidy',help="Species ploidy [2]",metavar='INT',type='int',default=2.0)
